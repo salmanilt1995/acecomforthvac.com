@@ -1,1 +1,305 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HVAC Service Areas Vancouver BC | Metro Vancouver & Lower Mainland | AceComfort</title>
+  <meta name="description" content="AceComfort serves all of Metro Vancouver and the Lower Mainland — Vancouver, Surrey, Burnaby, Richmond, Coquitlam, North Vancouver, Langley, Abbotsford, Squamish and more. Same-day HVAC service." />
+  <meta name="keywords" content="HVAC service areas Vancouver, heating repair Metro Vancouver, air conditioning Lower Mainland, heat pump installation BC, furnace repair Surrey Burnaby Richmond" />
+  <link rel="canonical" href="https://www.acecomfort.ca/locations/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .city-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: #fff;
+    }
+    .city-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .city-card-img { height: 180px; overflow: hidden; position: relative; }
+    .city-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .city-card:hover .city-card-img img { transform: scale(1.06); }
+    .city-card-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(18,42,77,0.65) 0%, transparent 60%);
+    }
+    .city-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .city-card-body h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .city-card-body p { font-size: 0.875rem; color: var(--text-light); margin-bottom: 1rem; flex: 1; }
+    .city-card-body .city-services { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
+    .city-tag { background: var(--off-white); color: var(--navy); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 20px; }
+
+    .area-badge-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 3rem; }
+    .area-badge {
+      background: var(--off-white);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.5rem 1.1rem;
+      border-radius: 25px;
+      border: 2px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+    .area-badge:hover { background: var(--orange); color: #fff; border-color: var(--orange); }
+
+    .region-section { margin-bottom: 3rem; }
+    .region-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
+
+    @media (max-width: 900px) { .city-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .city-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="top-bar"><div class="container"><div class="top-bar-left"><span>&#128197; 24/7 Emergency Service</span><span>&#127757; Metro Vancouver &amp; the Lower Mainland since 1995</span></div><div class="top-bar-right"><a href="mailto:info@acecomfort.ca">&#9993; info@acecomfort.ca</a></div></div></div>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo"><img src="images/Ace Comfort Logo.jpg" alt="AceComfort" class="logo-img" /></a>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="heating/index.html" class="nav-link">Heating <span class="chevron">&#9660;</span></a><div class="dropdown"><a href="heating/furnaces.html">Furnaces</a><a href="heating/boilers.html">Boilers</a><a href="heating/hot-water-tanks.html">Hot Water Tanks</a><a href="heating/tankless.html">Tankless Heaters</a><a href="heating/combi-boiler.html">Combi Boilers</a><a href="heating/rooftop.html">Rooftop Units</a><a href="heating/unit-heaters.html">Unit Heaters</a></div></li>
+          <li class="nav-item"><a href="air-conditioning/index.html" class="nav-link">Air Conditioning <span class="chevron">&#9660;</span></a><div class="dropdown"><a href="air-conditioning/central.html">Central AC</a><a href="air-conditioning/ductless.html">Ductless AC</a></div></li>
+          <li class="nav-item"><a href="heat-pumps/index.html" class="nav-link">Heat Pumps <span class="chevron">&#9660;</span></a><div class="dropdown"><a href="heat-pumps/central.html">Central Heat Pumps</a><a href="heat-pumps/ductless.html">Ductless Heat Pumps</a><a href="heat-pumps/water-source.html">Water Source</a></div></li>
+          <li class="nav-item"><a href="air-duct-cleaning/index.html" class="nav-link">Air Duct Cleaning <span class="chevron">&#9660;</span></a><div class="dropdown"><a href="air-duct-cleaning/residential.html">Residential</a><a href="air-duct-cleaning/commercial.html">Commercial</a></div></li>
+          <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+          <li class="nav-item"><a href="rebates.html" class="nav-link">Rebates</a></li><li class="nav-item"><a href="specials.html" class="nav-link" style="color:var(--orange);font-weight:700;">Specials</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        <div class="nav-cta"><a href="tel:6046363939" class="nav-phone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#16a34a" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> (604) 636-3939</a><a href="contact.html" class="btn btn-primary btn-sm">Book Service</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <ul class="breadcrumb"><li><a href="index.html">Home</a></li><li>Service Areas</li></ul>
+      <h1>HVAC Service Areas — Metro Vancouver &amp; the Lower Mainland</h1>
+      <p>AceComfort technicians are based throughout Metro Vancouver, ensuring fast response times across every community in the region. Same-day service available in most areas.</p>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section style="background:var(--navy);padding:1.5rem 0;">
+    <div class="container">
+      <div style="display:flex;justify-content:center;gap:4rem;flex-wrap:wrap;text-align:center;">
+        <div><div style="font-size:1.8rem;font-weight:800;color:var(--orange);">23+</div><div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Cities Served</div></div>
+        <div><div style="font-size:1.8rem;font-weight:800;color:var(--orange);">2 hr</div><div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Emergency Response</div></div>
+        <div><div style="font-size:1.8rem;font-weight:800;color:var(--orange);">24/7</div><div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Availability</div></div>
+        <div><div style="font-size:1.8rem;font-weight:800;color:var(--orange);">5,000+</div><div style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Homes Served</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured City Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">Where We Work</div>
+        <h2>Serving Every Corner of Metro Vancouver</h2>
+        <p>From the North Shore mountains to the Fraser Valley, our certified Red Seal technicians are ready to serve your home or business with same-day heating, cooling, and heat pump service.</p>
+      </div>
+
+      <div class="city-grid">
+        <a href="locations/vancouver.html" class="city-card">
+          <div class="city-card-img"><img src="images/Commercial.jpg" alt="Vancouver BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Vancouver</h3><p>Full HVAC services across all Vancouver neighbourhoods &mdash; East Van, West End, Kitsilano, Mount Pleasant, Dunbar, and more.</p><div class="city-services"><span class="city-tag">Heating</span><span class="city-tag">AC</span><span class="city-tag">Heat Pumps</span><span class="city-tag">Duct Cleaning</span></div></div>
+        </a>
+        <a href="locations/surrey.html" class="city-card">
+          <div class="city-card-img"><img src="images/Fotolia_45832189_S.jpg" alt="Surrey BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Surrey</h3><p>Serving Newton, Fleetwood, South Surrey, Whalley, and all Surrey communities with fast heating and cooling service.</p><div class="city-services"><span class="city-tag">Furnace Repair</span><span class="city-tag">AC Install</span><span class="city-tag">Heat Pumps</span></div></div>
+        </a>
+        <a href="locations/burnaby.html" class="city-card">
+          <div class="city-card-img"><img src="images/cover2.jpg" alt="Burnaby BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Burnaby</h3><p>Covering Metrotown, Brentwood, Lougheed, and South Burnaby. Expert furnace, boiler, and heat pump service.</p><div class="city-services"><span class="city-tag">Heating</span><span class="city-tag">AC</span><span class="city-tag">Boilers</span></div></div>
+        </a>
+        <a href="locations/richmond.html" class="city-card">
+          <div class="city-card-img"><img src="images/Central-air-conditioner.jpg" alt="Richmond BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Richmond</h3><p>Serving all of Richmond from Steveston to City Centre. Ductless specialists, furnace replacement, and air duct cleaning.</p><div class="city-services"><span class="city-tag">Ductless AC</span><span class="city-tag">Furnaces</span><span class="city-tag">Duct Cleaning</span></div></div>
+        </a>
+        <a href="locations/coquitlam.html" class="city-card">
+          <div class="city-card-img"><img src="images/Fotolia_20056135_XS.jpg" alt="Coquitlam BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Coquitlam</h3><p>Full HVAC coverage in Coquitlam. Heat pump installations, furnace repair, and ductless systems for all Coquitlam homes.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnace</span><span class="city-tag">Ductless</span></div></div>
+        </a>
+        <a href="locations/north-vancouver.html" class="city-card">
+          <div class="city-card-img"><img src="images/ductless-AC.jpg" alt="North Vancouver BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>North Vancouver</h3><p>Cold-climate heat pumps, high-efficiency furnaces, and boilers for North Shore homes. Serving all North Vancouver neighbourhoods.</p><div class="city-services"><span class="city-tag">Cold-Climate HP</span><span class="city-tag">Furnaces</span><span class="city-tag">Boilers</span></div></div>
+        </a>
+        <a href="locations/west-vancouver.html" class="city-card">
+          <div class="city-card-img"><img src="images/Furnace-Repair.jpg" alt="West Vancouver BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>West Vancouver</h3><p>Serving Ambleside, Dundarave, Horseshoe Bay, Caulfeild, and the British Properties with expert heating, AC, and heat pump service.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnaces</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/port-coquitlam.html" class="city-card">
+          <div class="city-card-img"><img src="images/Fotolia_45832189_S.jpg" alt="Port Coquitlam BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Port Coquitlam</h3><p>Full heating, AC, and heat pump service across all Port Coquitlam neighbourhoods. Same-day service available.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnace Repair</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/port-moody.html" class="city-card">
+          <div class="city-card-img"><img src="images/cover2.jpg" alt="Port Moody BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Port Moody</h3><p>Serving Heritage Mountain, Inlet Centre, and Moody Centre with heat pump installation, furnace repair, and ductless AC.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Heating</span><span class="city-tag">Ductless AC</span></div></div>
+        </a>
+        <a href="locations/new-westminster.html" class="city-card">
+          <div class="city-card-img"><img src="images/Central-air-conditioner.jpg" alt="New Westminster BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>New Westminster</h3><p>Serving Queens Park, Sapperton, Queensborough, and Uptown with full HVAC service. Boiler specialists for heritage homes.</p><div class="city-services"><span class="city-tag">Boilers</span><span class="city-tag">Heat Pumps</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/ladner.html" class="city-card">
+          <div class="city-card-img"><img src="images/ductless-AC.jpg" alt="Ladner BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Ladner</h3><p>Full heating, cooling, and heat pump service across Ladner Village, Boundary Bay, and South Delta.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnaces</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/tsawwassen.html" class="city-card">
+          <div class="city-card-img"><img src="images/Fotolia_20056135_XS.jpg" alt="Tsawwassen BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Tsawwassen</h3><p>Serving Tsawwassen Springs, Beach Grove, and English Bluff with heat pump installation, furnace service, and AC repair.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Heating</span><span class="city-tag">AC Repair</span></div></div>
+        </a>
+        <a href="locations/horseshoe-bay.html" class="city-card">
+          <div class="city-card-img"><img src="images/Furnace-Repair.jpg" alt="Horseshoe Bay BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Horseshoe Bay</h3><p>Cold-climate heat pumps and high-efficiency heating for Horseshoe Bay, Gleneagles, and Eagle Harbour homes.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnaces</span><span class="city-tag">Boilers</span></div></div>
+        </a>
+        <a href="locations/cloverdale.html" class="city-card">
+          <div class="city-card-img"><img src="images/cover2.jpg" alt="Cloverdale BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Cloverdale</h3><p>Serving Cloverdale Town Centre, Clayton Heights, and Fleetwood with same-day heating, AC, and heat pump service.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnace Repair</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/aldergrove.html" class="city-card">
+          <div class="city-card-img"><img src="images/Central-air-conditioner.jpg" alt="Aldergrove BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Aldergrove</h3><p>Fast HVAC service across Aldergrove &mdash; heat pump installation, furnace repair, and air conditioning for Fraser Valley homeowners.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Heating</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/langley.html" class="city-card">
+          <div class="city-card-img"><img src="images/cover2.jpg" alt="Langley BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Langley</h3><p>Serving Langley City, Walnut Grove, Fort Langley, and Willowbrook with heat pump installation, furnace repair, and AC service.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnace Repair</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/maple-ridge.html" class="city-card">
+          <div class="city-card-img"><img src="images/Fotolia_45832189_S.jpg" alt="Maple Ridge BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Maple Ridge</h3><p>Full heating, cooling, and heat pump service across Maple Ridge and Albion. Same-day response, licensed technicians.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Heating</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/white-rock.html" class="city-card">
+          <div class="city-card-img"><img src="images/Fotolia_20056135_XS.jpg" alt="White Rock BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>White Rock</h3><p>HVAC service for White Rock and South Surrey homes &mdash; heat pumps, furnace repair, air conditioning, and duct cleaning.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Furnace Repair</span><span class="city-tag">AC</span></div></div>
+        </a>
+        <a href="locations/abbotsford.html" class="city-card">
+          <div class="city-card-img"><img src="images/ductless-AC.jpg" alt="Abbotsford BC HVAC service" /><div class="city-card-img-overlay"></div></div>
+          <div class="city-card-body"><h3>Abbotsford</h3><p>Reliable furnace, heat pump, and air conditioning service across all Abbotsford neighbourhoods. Cold winters, hot summers &mdash; we handle both.</p><div class="city-services"><span class="city-tag">Heat Pumps</span><span class="city-tag">Heating</span><span class="city-tag">AC</span></div></div>
+        </a>
+      </div>
+
+      <!-- All Communities by Region -->
+      <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:2.5rem;margin-bottom:2.5rem;">
+        <h3 style="color:var(--navy);margin-bottom:2rem;text-align:center;">All Service Communities</h3>
+
+        <div class="region-section">
+          <div class="region-label">Metro Vancouver Core</div>
+          <div class="area-badge-grid">
+            <span class="area-badge">Vancouver</span>
+            <span class="area-badge">Burnaby</span>
+            <span class="area-badge">Richmond</span>
+            <span class="area-badge">New Westminster</span>
+            <span class="area-badge">North Vancouver</span>
+            <span class="area-badge">West Vancouver</span>
+          </div>
+        </div>
+
+        <div class="region-section">
+          <div class="region-label">Tri-Cities &amp; Ridge Meadows</div>
+          <div class="area-badge-grid">
+            <span class="area-badge">Coquitlam</span>
+            <span class="area-badge">Port Coquitlam</span>
+            <span class="area-badge">Port Moody</span>
+            <span class="area-badge">Maple Ridge</span>
+            <span class="area-badge">Pitt Meadows</span>
+          </div>
+        </div>
+
+        <div class="region-section">
+          <div class="region-label">Surrey &amp; South of the Fraser</div>
+          <div class="area-badge-grid">
+            <span class="area-badge">Surrey</span>
+            <span class="area-badge">Cloverdale</span>
+            <span class="area-badge">White Rock</span>
+            <span class="area-badge">Delta</span>
+            <span class="area-badge">Ladner</span>
+            <span class="area-badge">Tsawwassen</span>
+          </div>
+        </div>
+
+        <div class="region-section">
+          <div class="region-label">Langley &amp; Fraser Valley</div>
+          <div class="area-badge-grid">
+            <span class="area-badge">Langley</span>
+            <span class="area-badge">Aldergrove</span>
+            <span class="area-badge">Abbotsford</span>
+            <span class="area-badge">Mission</span>
+            <span class="area-badge">Chilliwack</span>
+          </div>
+        </div>
+
+        <div class="region-section" style="margin-bottom:0;">
+          <div class="region-label">Sea to Sky</div>
+          <div class="area-badge-grid">
+            <span class="area-badge">Squamish</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Not in list callout -->
+      <div style="background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:var(--radius-lg);padding:2.5rem;text-align:center;color:var(--white);">
+        <h3 style="color:var(--white);margin-bottom:0.75rem;">Don't See Your Community?</h3>
+        <p style="color:rgba(255,255,255,0.85);max-width:580px;margin:0 auto 1.5rem;">We're constantly expanding. Give us a call — there's a good chance we can still help, or we'll connect you with a trusted partner nearby.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="tel:6046363939" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#16a34a" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> (604) 636-3939</a>
+          <a href="contact.html" class="btn btn-secondary">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Fast Response -->
+  <section class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-header"><div class="label">Our Promise</div><h2>Local Technicians, Faster Response</h2><p>Because our technicians live and work across the Lower Mainland, we don't dispatch from a single depot. You get the closest certified tech — which means you get help faster.</p></div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center;padding:2.5rem;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">&#128205;</div>
+          <h3>Locally Based Techs</h3>
+          <p>Our technicians are stationed across the region — not driving in from one central location. Faster arrival, less wait.</p>
+        </div>
+        <div class="card" style="text-align:center;padding:2.5rem;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">&#9200;</div>
+          <h3>Same-Day Service</h3>
+          <p>Call before noon on most days and we'll have a tech at your door the same day — including weekends in most service areas.</p>
+        </div>
+        <div class="card" style="text-align:center;padding:2.5rem;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">&#127981;</div>
+          <h3>2-Hour Emergency Response</h3>
+          <p>No heat in winter or no AC during a heat dome? Our emergency line is answered 24/7 with a guaranteed 2-hour response across Metro Vancouver.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Book? We're in Your Neighbourhood.</h2>
+      <p>Same-day HVAC service across Metro Vancouver and the Lower Mainland. Call us or request a free quote online.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-secondary btn-lg">Get a Free Quote</a>
+        <a href="tel:6046363939" class="btn btn-lg" style="background:#fff2;color:#fff;border:2px solid rgba(255,255,255,0.5);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#16a34a" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> (604) 636-3939</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo" style="margin-bottom:1rem;"><img src="images/Ace Comfort Logo.jpg" alt="AceComfort" class="logo-img" /></a><p>Metro Vancouver's trusted HVAC experts.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="heating/index.html">Heating</a></li><li><a href="air-conditioning/index.html">Air Conditioning</a></li><li><a href="heat-pumps/index.html">Heat Pumps</a></li><li><a href="air-duct-cleaning/index.html">Duct Cleaning</a></li></ul></div><div class="footer-col"><h4>Top Locations</h4><ul><li><a href="locations/vancouver.html">Vancouver</a></li><li><a href="locations/surrey.html">Surrey</a></li><li><a href="locations/burnaby.html">Burnaby</a></li><li><a href="locations/richmond.html">Richmond</a></li><li><a href="locations/coquitlam.html">Coquitlam</a></li><li><a href="locations/north-vancouver.html">North Vancouver</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="membership.html">Membership</a></li><li></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#16a34a" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> <span><a href="tel:6046363939" style="color:#fff;">(604) 636-3939</a></span></div><div class="footer-contact-item" style="margin-top:0.5rem;">&#128205; <span style="color:rgba(255,255,255,0.7);">Metro Vancouver, BC</span></div></div></div></div><div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;"><span>&copy; 2025 AceComfort Heating &amp; Air Conditioning</span><span style="color:rgba(255,255,255,0.5);">Serving Metro Vancouver &amp; the Lower Mainland</span></div></div></footer>
+
+  <div class="floating-cta"><a href="tel:6046363939" class="float-btn emergency"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#16a34a" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> <span class="label">Emergency: (604) 636-3939</span></a><a href="contact.html" class="float-btn">&#128197; <span class="label">Book Service</span></a></div>
+  <script src="js/main.js"></script>
+  <script src="js/booking-modal.js"></script>
+</body>
+</html>

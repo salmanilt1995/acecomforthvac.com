@@ -154,53 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
     floatingCta.style.transition = 'opacity 0.3s ease';
   }
 
-  /* ---------- Book Now dropdown conversion ---------- */
-  function buildBookNowDropdown(source) {
-    const href = source.getAttribute('href') || 'contact.html';
-    const dropdown = document.createElement('div');
-    dropdown.className = 'cta-dropdown';
-
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'btn btn-primary btn-sm cta-dropdown-toggle';
-    button.innerHTML = 'Book Now <span class="dropdown-arrow">▾</span>';
-
-    const menu = document.createElement('div');
-    menu.className = 'cta-dropdown-menu';
-
-    const appointment = document.createElement('a');
-    appointment.className = 'cta-dropdown-item';
-    appointment.href = href;
-    appointment.textContent = 'Book an Appointment';
-
-    const request = document.createElement('a');
-    request.className = 'cta-dropdown-item';
-    request.href = 'mailto:info@acecomforthvac.com?subject=Submit%20Request';
-    request.textContent = 'Submit Request';
-
-    menu.append(appointment, request);
-    dropdown.append(button, menu);
-
-    button.addEventListener('click', e => {
-      e.preventDefault();
-      e.stopPropagation();
-      dropdown.classList.toggle('open');
-    });
-
-    document.addEventListener('click', () => dropdown.classList.remove('open'));
-    menu.addEventListener('click', e => e.stopPropagation());
-
-    return dropdown;
-  }
-
-  document.querySelectorAll('a.btn, a.float-btn').forEach(el => {
-    const text = el.textContent.trim();
-    if (/Book\s+(Service|Now)|Get a Free Quote|Schedule a Visit/i.test(text)) {
-      const dropdown = buildBookNowDropdown(el);
-      el.replaceWith(dropdown);
-    }
-  });
-
 });
 
 /* ---------- Fade-in CSS injection ---------- */

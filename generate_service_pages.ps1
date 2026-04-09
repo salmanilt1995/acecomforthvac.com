@@ -299,7 +299,7 @@ $otherLinks          </ul>
     <div class="footer-brand"><a href="../index.html" class="logo" style="margin-bottom:1rem;"><img src="../images/Ace Comfort Logo.jpg" alt="AceComfort" class="logo-img" /></a><p>Metro Vancouver's trusted HVAC experts since 1995.</p></div>
     <div class="footer-col"><h4>Services</h4><ul><li><a href="../heating/index.html">Heating</a></li><li><a href="../air-conditioning/index.html">Air Conditioning</a></li><li><a href="../heat-pumps/index.html">Heat Pumps</a></li><li><a href="../air-duct-cleaning/index.html">Duct Cleaning</a></li></ul></div>
     <div class="footer-col"><h4>$n Services</h4><ul><li><a href="$slug-heat-pump-installation.html">Heat Pump Installation</a></li><li><a href="$slug-furnace-repair.html">Furnace Repair</a></li><li><a href="$slug-air-conditioning-repair.html">AC Repair</a></li><li><a href="$slug.html">All $n Services</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span><a href="tel:6046363939" style="color:#fff;">(604) 636-3939</a></span></div><div class="footer-contact-item"><span><a href="mailto:info@acecomforthvac.com" style="color:rgba(255,255,255,0.65);">info@acecomforthvac.com</a></span></div></div>
+    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span><a href="tel:6046363939" style="color:#fff;">(604) 636-3939</a></span></div><div class="footer-contact-item"><span><a href="mailto:info@acecomfort.ca" style="color:rgba(255,255,255,0.65);">info@acecomfort.ca</a></span></div></div>
   </div></div><div class="footer-bottom"><div class="container"><span>&copy; 2025 AceComfort Heating &amp; Air Conditioning</span></div></div></footer>
 
   <div class="floating-cta"><a href="tel:6046363939" class="float-btn emergency"><span class="label">Emergency: (604) 636-3939</span></a><a href="../contact.html" class="float-btn"><span class="label">Book Service</span></a></div>
@@ -321,4 +321,3 @@ foreach ($city in $cities) {
 }
 
 Write-Host "Done. Generated $count pages."
-

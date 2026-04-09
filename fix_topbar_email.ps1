@@ -1,4 +1,4 @@
-$email = '<div class="top-bar-right"><a href="mailto:info@acecomforthvac.com" style="color:#f47328;font-weight:600;">&#9993; info@acecomforthvac.com</a></div>'
+$email = '<div class="top-bar-right"><a href="mailto:info@acecomfort.ca" style="color:#f47328;font-weight:600;">&#9993; info@acecomfort.ca</a></div>'
 
 Get-ChildItem -Path "C:\Users\ryans\acecomfort-website" -Recurse -Filter "*.html" | ForEach-Object {
   $content = [System.IO.File]::ReadAllText($_.FullName, [System.Text.Encoding]::UTF8)
@@ -16,4 +16,3 @@ Get-ChildItem -Path "C:\Users\ryans\acecomfort-website" -Recurse -Filter "*.html
   }
 }
 Write-Host "Done."
-
