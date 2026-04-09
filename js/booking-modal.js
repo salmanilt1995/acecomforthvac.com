@@ -104,7 +104,7 @@
   window._bookingFormHTML = originalFormHTML;
 })();
 
-function openBookingModal(title, service) {
+function openBookingModal(title, service, requestType) {
   document.getElementById('bookingModalTitle').textContent = title || 'Book Now';
   document.getElementById('bookingModalService').value = service || '';
   // Reset form if it was submitted
@@ -116,8 +116,8 @@ function openBookingModal(title, service) {
       e.preventDefault();
       var name = this.querySelector('[name="name"]').value;
       var svc = document.getElementById('bookingModalService').value;
-      var requestType = this.querySelector('[name="requestType"]').value;
-      var typeLabel = requestType ? requestType.replace(/-/g, ' ') : '';
+      var reqType = this.querySelector('[name="requestType"]').value;
+      var typeLabel = reqType ? reqType.replace(/-/g, ' ') : '';
       this.innerHTML = '<div style="text-align:center;padding:2rem 0;">' +
         '<div style="font-size:2.5rem;margin-bottom:1rem;color:#16a34a;">&#10003;</div>' +
         '<h3 style="color:#0f2a4a;margin-bottom:0.5rem;">Thank You, ' + name + '!</h3>' +
@@ -127,6 +127,13 @@ function openBookingModal(title, service) {
       this.removeEventListener('submit', handler);
     });
   }
+
+  // Pre-select request type if provided
+  if (requestType) {
+    var select = form.querySelector('[name="requestType"]');
+    if (select) select.value = requestType;
+  }
+
   document.getElementById('bookingModal').style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
