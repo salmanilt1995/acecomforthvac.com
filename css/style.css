@@ -101,11 +101,11 @@ a:hover {
   color: var(--orange-dark);
 }
 
-a[href^="tel"] {
+a[href^="tel"]:not([class*="btn"]) {
   color: #16a34a;
 }
 
-a[href^="tel"]:hover {
+a[href^="tel"]:not([class*="btn"]):hover {
   color: #15803d;
 }
 
@@ -170,6 +170,7 @@ li {
 /* ---------- Layout Utilities ---------- */
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -283,7 +284,9 @@ li {
   border: 2px solid transparent;
   cursor: pointer;
   transition: all var(--transition);
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -309,24 +312,33 @@ li {
   color: #0f2a4a;
 }
 
+/* Ensure button text is ALWAYS white when a variant is used, even if it's a tel link */
+.btn[href^="tel"],
+.btn-primary[href^="tel"],
+.btn-secondary[href^="tel"],
+.btn-outline:hover[href^="tel"],
+.btn-green[href^="tel"] {
+  color: var(--white) !important;
+}
+
 .btn-primary {
-  background: var(--orange);
-  color: var(--white);
-  border-color: var(--orange);
+  background: var(--orange) !important;
+  color: var(--white) !important;
+  border-color: var(--orange) !important;
 }
 
 .btn-primary:hover {
-  background: var(--orange-dark);
-  border-color: var(--orange-dark);
-  color: var(--white);
+  background: var(--orange-dark) !important;
+  border-color: var(--orange-dark) !important;
+  color: var(--white) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(232, 80, 10, 0.35);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--white);
-  border-color: var(--white);
+  background: transparent !important;
+  color: var(--white) !important;
+  border-color: var(--white) !important;
 }
 
 .btn-secondary:hover {
@@ -335,20 +347,20 @@ li {
 }
 
 .btn-outline {
-  background: transparent;
-  color: var(--navy);
-  border-color: var(--navy);
+  background: transparent !important;
+  color: var(--navy) !important;
+  border-color: var(--navy) !important;
 }
 
 .btn-outline:hover {
-  background: var(--navy);
-  color: var(--white);
+  background: var(--navy) !important;
+  color: var(--white) !important;
 }
 
 .btn-green {
-  background: var(--green);
-  color: var(--white);
-  border-color: var(--green);
+  background: var(--green) !important;
+  color: var(--white) !important;
+  border-color: var(--green) !important;
 }
 
 .btn-green:hover {
@@ -1327,6 +1339,8 @@ li {
   color: var(--white);
   font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   margin-bottom: 0.75rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .page-hero p {
@@ -1949,6 +1963,10 @@ li {
     padding: 60px 0;
   }
 
+  .grid-2 {
+    gap: 1.5rem;
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -1958,7 +1976,7 @@ li {
   }
 
   .container-fuild-header {
-    margin: 0 25px;
+    margin: 0;
   }
 
   /* Reverse stacking order on mobile */
@@ -2015,8 +2033,9 @@ li {
   /* Grid stacking */
   .grid-2,
   .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
+  .grid-4,
+  .stack-mobile-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .membership-grid {
