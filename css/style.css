@@ -1,5 +1,5 @@
-/* ============================================================
-   AceComfort Heating & Air Conditioning — Main Stylesheet
+﻿/* ============================================================
+   AceComfort Heating & Air Conditioning â€” Main Stylesheet
    Brand Colors: Blue #0072e5 | Dark #071323 | Orange #fb8e28
    ============================================================ */
 
@@ -32,6 +32,8 @@
   --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 html { scroll-behavior: smooth; font-size: 16px; }
 
 @keyframes pageIn {
@@ -39,8 +41,11 @@ html { scroll-behavior: smooth; font-size: 16px; }
   to   { opacity: 1; }
 }
 
+body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, a, p, span, label {
+  font-family: 'Poppins', sans-serif !important;
+}
+
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.7;
@@ -49,7 +54,6 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.25;
   color: var(--navy);
@@ -117,7 +121,7 @@ li { margin-bottom: 0.4rem; color: var(--dark-gray); }
   gap: 0.5rem;
   padding: 0.875rem 2rem;
   border-radius: 50px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
@@ -126,6 +130,28 @@ li { margin-bottom: 0.4rem; color: var(--dark-gray); }
   transition: all var(--transition);
   white-space: nowrap;
   text-decoration: none;
+}
+
+.booking-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.booking-dropdown select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: var(--navy);
+  font-size: 1rem;
+  outline: none;
+}
+
+.booking-dropdown label {
+  font-weight: 700;
+  color: #0f2a4a;
 }
 
 .btn-primary {
@@ -245,10 +271,13 @@ li { margin-bottom: 0.4rem; color: var(--dark-gray); }
   justify-content: center;
   font-size: 1.5rem;
 }
+.nav-phone{
+  display: none !important;
+}
 
-/* Logo image — drop images/logo.png into the project and the emoji fallback disappears */
+/* Logo image â€” drop images/logo.png into the project and the emoji fallback disappears */
 .logo-img {
-  height: 72px;
+  height: 55px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -269,7 +298,16 @@ li { margin-bottom: 0.4rem; color: var(--dark-gray); }
 }
 
 /* Nav Menu */
-.nav-menu { display: flex; align-items: center; justify-content: center; gap: 0; list-style: none; padding: 0; margin: 0; flex: 1; }
+.nav-menu { 
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    gap: 13px; }
 
 .nav-item { position: relative; }
 
@@ -541,7 +579,7 @@ li { margin-bottom: 0.4rem; color: var(--dark-gray); }
 }
 .service-list li:last-child { border-bottom: none; }
 .service-list li::before {
-  content: '✓';
+  content: 'âœ“';
   color: var(--green);
   font-weight: 700;
   flex-shrink: 0;
@@ -770,7 +808,7 @@ li { margin-bottom: 0.4rem; color: var(--dark-gray); }
 }
 .page-hero .breadcrumb a { color: rgba(255,255,255,0.65); }
 .page-hero .breadcrumb a:hover { color: var(--orange-light); }
-.page-hero .breadcrumb li::after { content: '›'; margin-left: 0.5rem; }
+.page-hero .breadcrumb li::after { content: 'â€º'; margin-left: 0.5rem; }
 .page-hero .breadcrumb li:last-child::after { display: none; }
 .page-hero h1 { color: var(--white); font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 0.75rem; }
 .page-hero p { color: rgba(255,255,255,0.82); max-width: 600px; font-size: 1.05rem; }
@@ -1153,3 +1191,4 @@ li { margin-bottom: 0.4rem; color: var(--dark-gray); }
   .btn-lg { padding: 0.875rem 1.75rem; font-size: 0.95rem; }
   .quick-services { grid-template-columns: 1fr; }
 }
+
