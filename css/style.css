@@ -287,7 +287,7 @@ li {
   overflow: hidden;
   top: 100%;
   left: 0;
-  margin-top: 8px;
+  margin-top: 0px;
   border: 1px solid var(--border);
   padding: 0.5rem 0;
 }
@@ -326,8 +326,9 @@ li {
   bottom: 100%;
   margin-top: 0;
   margin-bottom: 8px;
-  box-shadow: 0 -8px 32px rgba(0,0,0,0.15);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
 }
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1365,7 +1366,8 @@ li {
 .page-hero .breadcrumb {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Ensure breadcrumbs wrap on small screens */
+  flex-wrap: wrap;
+  /* Ensure breadcrumbs wrap on small screens */
   gap: 0.5rem;
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.65);
@@ -1383,7 +1385,8 @@ li {
 }
 
 .page-hero .breadcrumb li::after {
-  content: '\203A'; /* Proper chevron sign */
+  content: '\203A';
+  /* Proper chevron sign */
   margin-left: 0.5rem;
   opacity: 0.5;
 }
@@ -1464,13 +1467,16 @@ li {
   padding: 0;
   margin: 0;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-  scrollbar-width: none; /* Hide scrollbar for clean look */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling for iOS */
+  scrollbar-width: none;
+  /* Hide scrollbar for clean look */
   gap: 0;
 }
 
 .service-nav-list::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome/Safari */
+  display: none;
+  /* Hide scrollbar for Chrome/Safari */
 }
 
 .service-nav-list a {
@@ -1855,6 +1861,11 @@ li {
   flex-direction: column;
   gap: 0.75rem;
   align-items: flex-start;
+  pointer-events: none;
+}
+
+.floating-cta>* {
+  pointer-events: auto;
 }
 
 .float-btn {
@@ -2121,7 +2132,8 @@ li {
     display: none;
     position: fixed;
     inset: 0;
-    top: 185px; /* Increased to ensure full clearance of the stacked mobile header */
+    top: 185px;
+    /* Increased to ensure full clearance of the stacked mobile header */
     background: var(--white);
     flex-direction: column;
     align-items: stretch;
@@ -2149,7 +2161,7 @@ li {
   }
 
   /* Styling for when a menu item is expanded */
-  .nav-item.open > .nav-link {
+  .nav-item.open>.nav-link {
     background: var(--off-white);
     color: var(--orange);
     border-bottom: 2px solid var(--orange);
@@ -2163,7 +2175,7 @@ li {
     background: rgba(251, 142, 40, 0.05);
   }
 
-  .nav-item.open > .nav-link .chevron {
+  .nav-item.open>.nav-link .chevron {
     transform: rotate(180deg);
   }
 
@@ -2195,7 +2207,8 @@ li {
   }
 
   .dropdown a::before {
-    content: '\2022'; /* Bullet point using Unicode */
+    content: '\2022';
+    /* Bullet point using Unicode */
     position: absolute;
     left: 2.25rem;
     color: var(--orange);
@@ -2321,4 +2334,12 @@ li {
 .chat-button {
   left: 33px !important;
   right: inherit !important;
+}
+
+/* Chatbot Compatibility Fix */
+chat-component,
+.chatbot-container,
+#mysp-chatbot {
+  z-index: 999999 !important;
+  pointer-events: auto !important;
 }

@@ -141,11 +141,14 @@
           <div class="btn-wrapper right">
             <button class="btn btn-primary btn-sm">Book Now &#9662;</button>
             <div class="btn-dropdown-content">
-              <a href="#" onclick="openBookingModal('Book an Appointment','Header','Book an Appointment');return false;">&#128197; Book an Appointment</a>
-              <a href="#" onclick="openBookingModal('Submit Request','Header','Submit Request');return false;">&#9993; Submit Request</a>
+              <a href="#" id="booking_button">&#128197;
+                Book an Appointment</a>
+              <a href="#" onclick="openBookingModal('Submit Request','Header','Submit Request');return false;">&#9993;
+                Submit Request</a>
             </div>
           </div>
-          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+          <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
       </nav>
     </div>
@@ -173,12 +176,19 @@
           <div class="btn-wrapper">
             <button class="btn btn-primary btn-lg">Book Now &#9662;</button>
             <div class="btn-dropdown-content">
-              <a href="#" onclick="openBookingModal('Book an Appointment','Hero','Book an Appointment');return false;">&#128197; Book an Appointment</a>
-              <a href="#" onclick="openBookingModal('Submit Request','Hero','Submit Request');return false;">&#9993; Submit Request</a>
+              <a href="#"
+                onclick="openBookingModal('Book an Appointment','Hero','Book an Appointment');return false;">&#128197;
+                Book an Appointment</a>
+              <a href="#" onclick="openBookingModal('Submit Request','Hero','Submit Request');return false;">&#9993;
+                Submit Request</a>
             </div>
           </div>
           <div class="btn-wrapper">
-            <button class="btn btn-secondary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg> Call Us Now &#9662;</button>
+            <button class="btn btn-secondary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z" />
+              </svg> Call Us Now &#9662;</button>
             <div class="btn-dropdown-content">
               <a href="tel:6046363939">&#128222; Call (604) 636-3939</a>
               <a href="contact.html">&#9993; Contact Page</a>
@@ -217,8 +227,11 @@
         <div class="btn-wrapper" style="width:100%;">
           <button class="btn btn-primary" style="width:100%;justify-content:center;">Schedule a Visit &#9662;</button>
           <div class="btn-dropdown-content" style="width:100%;">
-            <a href="#" onclick="openBookingModal('Book an Appointment','Trust Card','Book an Appointment');return false;">&#128197; Book an Appointment</a>
-            <a href="#" onclick="openBookingModal('Submit Request','Trust Card','Submit Request');return false;">&#9993; Submit Request</a>
+            <a href="#"
+              onclick="openBookingModal('Book an Appointment','Trust Card','Book an Appointment');return false;">&#128197;
+              Book an Appointment</a>
+            <a href="#" onclick="openBookingModal('Submit Request','Trust Card','Submit Request');return false;">&#9993;
+              Submit Request</a>
           </div>
         </div>
       </div>
@@ -815,8 +828,8 @@
 
         <div class="footer-col">
           <h4>Contact</h4>
-          <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-              width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;">
+          <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              fill="currentColor" width="1em" height="1em" style="vertical-align:-0.15em;flex-shrink:0;">
               <path
                 d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z" />
             </svg> <span><strong><a href="tel:6046363939" style="color:#fff;">(604)
@@ -838,22 +851,31 @@
     </div>
   </footer>
   <script type="text/javascript">
-    var script = document.createElement("script");
-    script.src = "https://demo1.myspcrm.com/chatbot/chatbot.js";
-    script.async = true;
-    let head = document.getElementsByTagName('HEAD')[0];
-    let link = document.createElement('link');
+    var head = document.getElementsByTagName('HEAD')[0];
+    var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
     link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
     head.appendChild(link);
-    function createChatComponent() {
-      var chatComponent = document.createElement("chat-component");
-      document.body.appendChild(chatComponent);
-      chatComponent.parentNode.insertBefore(script, chatComponent.nextSibling);
-    }
-    createChatComponent();
+
+    var script = document.createElement("script");
+    script.src = "https://simplymasteradmin.com/chatbot/chatbot.js";
+    script.async = true;
+    var chatComponent = document.createElement("chat-component");
+    document.body.appendChild(chatComponent);
+    chatComponent.parentNode.insertBefore(script, chatComponent.nextSibling);
   </script>
+
+  <script type="text/javascript">
+    var script = document.createElement("script");
+    script.src = "https://acecomfort.myspcrm.com/booking/booking.js?url=" + 'https://acecomfort.myspcrm.com';
+    script.async = true;
+    var bookingComponent = document.createElement("booking-component");
+    document.body.appendChild(bookingComponent);
+    bookingComponent.parentNode.insertBefore(script, bookingComponent.nextSibling);
+
+  </script>
+
   <!-- ===== FLOATING CTA ===== -->
   <div class="floating-cta" aria-label="Quick contact">
     <a href="tel:6046363939" class="float-btn emergency" aria-label="Call us">
@@ -866,8 +888,11 @@
     <div class="btn-wrapper">
       <button class="float-btn" aria-label="Book service">&#128197; <span class="label">Book Now &#9662;</span></button>
       <div class="btn-dropdown-content dropdown-up">
-        <a href="#" onclick="openBookingModal('Book an Appointment','Floating CTA','Book an Appointment');return false;">&#128197; Book an Appointment</a>
-        <a href="#" onclick="openBookingModal('Submit Request','Floating CTA','Submit Request');return false;">&#9993; Submit Request</a>
+        <a href="#"
+          onclick="openBookingModal('Book an Appointment','Floating CTA','Book an Appointment');return false;">&#128197;
+          Book an Appointment</a>
+        <a href="#" onclick="openBookingModal('Submit Request','Floating CTA','Submit Request');return false;">&#9993;
+          Submit Request</a>
       </div>
     </div>
   </div>
@@ -883,4 +908,3 @@
 </body>
 
 </html>
-

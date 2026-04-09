@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Smooth Scroll for anchor links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
+      const href = a.getAttribute('href');
+      if (href === '#') return; // Skip if it's just a placeholder #
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const offset = 90;
