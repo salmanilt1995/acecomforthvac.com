@@ -1,5 +1,5 @@
 /* ============================================================
-   AceComfort Heating & Air Conditioning â€” Main Stylesheet
+   AceComfort Heating & Air Conditioning Ã¢â¬â Main Stylesheet
    Brand Colors: Blue #0072e5 | Dark #071323 | Orange #fb8e28
    ============================================================ */
 
@@ -370,14 +370,18 @@ li {
   color: #0f2a4a;
 }
 
-/* Ensure button text is ALWAYS white when a variant is used, even if it's a tel link */
-.btn[href^="tel"],
+/* Ensure button text is ALWAYS white when a primary/secondary/green variant is used, even if it's a tel link */
 .btn-primary[href^="tel"],
 .btn-secondary[href^="tel"],
-.btn-outline:hover[href^="tel"],
-.btn-green[href^="tel"] {
-  color: var(--white) !important;
+.btn-green[href^="tel"],
+.btn-outline:hover[href^="tel"] {
+  color: #fff !important;
 }
+
+.btn-outline[href^="tel"] {
+  color: var(--navy) !important;
+}
+
 
 .btn-primary {
   background: var(--orange) !important;
@@ -407,7 +411,7 @@ li {
 .btn-outline {
   background: transparent !important;
   color: var(--navy) !important;
-  border-color: var(--navy) !important;
+  border: 2px solid var(--navy) !important;
 }
 
 .btn-outline:hover {
@@ -558,9 +562,9 @@ li {
   display: none !important;
 }
 
-/* Logo image â€” drop images/logo.png into the project and the emoji fallback disappears */
+/* Logo image Ã¢â¬â drop images/logo.png into the project and the emoji fallback disappears */
 .logo-img {
-  height: 55px;
+  height: 38px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -975,7 +979,7 @@ li {
 }
 
 .service-list li::before {
-  content: 'âœ“';
+  content: '\2713';
   color: var(--green);
   font-weight: 700;
   flex-shrink: 0;
@@ -2132,8 +2136,8 @@ li {
     display: none;
     position: fixed;
     inset: 0;
-    top: 185px;
-    /* Increased to ensure full clearance of the stacked mobile header */
+    top: 76px;
+    /* Adjusted as top-bar is now hidden on mobile */
     background: var(--white);
     flex-direction: column;
     align-items: stretch;
@@ -2235,16 +2239,8 @@ li {
   }
 
   /* Top Bar Hiding/Scaling */
-  .top-bar .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .top-bar-left,
-  .top-bar-right {
-    justify-content: center;
-    gap: 0.75rem;
-    font-size: 0.75rem;
+  .top-bar {
+    display: none;
   }
 
   .container-fuild-header {
@@ -2323,12 +2319,6 @@ li {
   .trust-bar .container {
     grid-template-columns: 1fr;
   }
-
-  .top-bar-left span:nth-child(2) {
-    display: none;
-  }
-
-  /* Hide address on tiny screens */
 }
 
 .chat-button {

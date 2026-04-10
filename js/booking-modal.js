@@ -1,4 +1,4 @@
-// Reusable Booking Modal — auto-injects into any page that includes this script
+// Reusable Booking Modal &mdash; auto-injects into any page that includes this script
 // Automatically intercepts all .btn links to contact.html and opens a modal instead
 (function() {
   // Don't run on the contact page itself
@@ -70,7 +70,7 @@
     var service = document.getElementById('bookingModalService').value;
     var requestType = this.querySelector('[name="requestType"]').value;
     this.innerHTML = '<div style="text-align:center;padding:2rem 0;">' +
-      '<div style="font-size:2.5rem;margin-bottom:1rem;color:#16a34a;">&#10003;</div>' +
+      '<div style="font-size:2.5rem;margin-bottom:1rem;color:#16a34a;">✓</div>' +
       '<h3 style="color:#0f2a4a;margin-bottom:0.5rem;">Thank You, ' + name + '!</h3>' +
       '<p style="color:#94a3b8;">We\'ve received your request' + (requestType ? ' for <strong>' + requestType.replace(/-/g, ' ') + '</strong>' : '') + (service ? ' regarding <strong>' + service + '</strong>' : '') + '. Our team will call you within 1 hour during business hours.</p>' +
       '<p style="font-weight:700;color:#e8500a;margin-top:1rem;">Or call us now: <a href="tel:6046363939" style="color:#e8500a;">(604) 636-3939</a></p>' +
@@ -119,7 +119,7 @@ function openBookingModal(title, service, requestType) {
       var reqType = this.querySelector('[name="requestType"]').value;
       var typeLabel = reqType ? reqType.replace(/-/g, ' ') : '';
       this.innerHTML = '<div style="text-align:center;padding:2rem 0;">' +
-        '<div style="font-size:2.5rem;margin-bottom:1rem;color:#16a34a;">&#10003;</div>' +
+        '<div style="font-size:2.5rem;margin-bottom:1rem;color:#16a34a;">✓</div>' +
         '<h3 style="color:#0f2a4a;margin-bottom:0.5rem;">Thank You, ' + name + '!</h3>' +
         '<p style="color:#94a3b8;">We\'ve received your ' + (typeLabel ? '<strong>' + typeLabel + '</strong> request' : 'request') + (svc ? ' regarding <strong>' + svc + '</strong>' : '') + '. Our team will call you within 1 hour during business hours.</p>' +
         '<p style="font-weight:700;color:#e8500a;margin-top:1rem;">Or call us now: <a href="tel:6046363939" style="color:#e8500a;">(604) 636-3939</a></p>' +

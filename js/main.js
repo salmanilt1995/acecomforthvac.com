@@ -1,5 +1,5 @@
 /* ============================================================
-   AceComfort — Main JavaScript
+   AceComfort &mdash; Main JavaScript
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ---------- Intersection Observer — Animate on Scroll ---------- */
+  /* ---------- Intersection Observer &mdash; Animate on Scroll ---------- */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const original = btn.textContent;
       btn.textContent = 'Sending...';
       btn.disabled = true;
-      // Simulate submission — replace with real backend / Formspree / etc.
+      // Simulate submission &mdash; replace with real backend / Formspree / etc.
       setTimeout(() => {
         btn.textContent = '✓ Message Sent!';
         btn.style.background = 'var(--green)';
